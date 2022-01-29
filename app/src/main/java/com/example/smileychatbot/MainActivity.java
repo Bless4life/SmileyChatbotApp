@@ -17,7 +17,6 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    //private static int SPLASH_SCREEN = 8000; //8 seconds
     //Variables
     Button register;
     TextView text_login, txt_botName, txt_slogan, txt2;
@@ -68,16 +67,6 @@ public class MainActivity extends AppCompatActivity {
         register.setAnimation(bottomAnim);
         text_login.setAnimation(bottomAnim);
 
-        /*create a splash screen
-        new Handler().postDelayed(new Runnable(){
-            @Override
-            public void run(){
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        }, SPLASH_SCREEN);
-        */
     }
 
     //takes user to login

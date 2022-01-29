@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1013972968496",
+    "project_id": "smileychatbot",
+    "storage_bucket": "smileychatbot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013972968496:android:3b27ea646032875b74f9f5",
+        "android_client_info": {
+          "package_name": "com.example.smileychatbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013972968496-m4te8bssmnl47a20q7dfernk9h59t548.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIoVtnTpJnSjA830IT0qgE1Bv0JM9_eiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013972968496-m4te8bssmnl47a20q7dfernk9h59t548.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
