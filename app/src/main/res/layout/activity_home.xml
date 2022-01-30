@@ -2,8 +2,222 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="25dp"
+
+    tools:context=".HomeActivity"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="354dp"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/imgBtn_bot"
+            android:layout_width="46dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Talk to Me"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_bot" />
+
+        <ImageButton
+            android:id="@+id/imgBtn_walk"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Go for a walk"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_walk" />
+
+        <ImageButton
+            android:id="@+id/imgBtn_music"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Music"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_music" />
+
+        <ImageButton
+            android:id="@+id/imgBtn_game"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Music"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_game" />
+
+        <ImageButton
+            android:id="@+id/imgBtn_diary"
+            android:layout_width="38dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Music"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_diary" />
+
+        <ImageButton
+            android:id="@+id/imgBtn_phone"
+            android:layout_width="47dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Phone"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_phone" />
+
+        <ImageButton
+            android:id="@+id/imgBtn_user"
+            android:layout_width="38dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="User"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_user" />
+
+        <ImageButton
+            android:id="@+id/imgBtn_exit"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:backgroundTint="#FFFFFF"
+            android:contentDescription="Log out"
+            android:cropToPadding="true"
+            android:src="@drawable/ic_exit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="357dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:text="Chat"
+            android:textAlignment="center"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="49dp"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:text="Walk"
+            android:textAlignment="center"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:text="Music"
+            android:textAlignment="center"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="47dp"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:text="Game"
+            android:textAlignment="center"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="43dp"
+            android:layout_height="match_parent"
+
+            android:clickable="false"
+            android:text="Diary"
+            android:textAlignment="center"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="39dp"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:text="Ring"
+            android:textAlignment="center"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:text="Profile"
+            android:textAlignment="center"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:text="Exit"
+            android:textAlignment="center"
+            android:textColor="#000" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="357dp"
+        android:layout_height="441dp"
+        android:src="@drawable/ic_chat_bot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="How are you Feeling?"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="29sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_image"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_talk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Talk to Me!"
+        android:textAllCaps="false"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.642" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

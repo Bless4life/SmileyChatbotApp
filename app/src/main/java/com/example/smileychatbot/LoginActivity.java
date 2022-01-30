@@ -1,14 +1,11 @@
 package com.example.smileychatbot;
 
-import static androidx.constraintlayout.widget.ConstraintLayoutStates.TAG;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -19,15 +16,9 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-
-import org.w3c.dom.Text;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -52,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         logo = (ImageView) findViewById(R.id.logo_image);
         login_txt = (TextView) findViewById(R.id.txt_login);
         register = (Button) findViewById(R.id.button_register);
-        Login = (Button) findViewById(R.id.btn_login);
+        Login = (Button) findViewById(R.id.btn_talk);
         etLoginEmail = (TextInputEditText) findViewById(R.id.etLoginEmail);
         etLoginPassword = (TextInputEditText) findViewById(R.id.etLoginPass);
 
