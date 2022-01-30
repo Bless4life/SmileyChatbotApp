@@ -81,7 +81,7 @@
             android:src="@drawable/ic_phone" />
 
         <ImageButton
-            android:id="@+id/imgBtn_user"
+            android:id="@+id/imgBtn_profile"
             android:layout_width="38dp"
             android:layout_height="match_parent"
             android:background="#00000000"

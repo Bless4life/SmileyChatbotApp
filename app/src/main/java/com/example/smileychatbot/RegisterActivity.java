@@ -126,6 +126,7 @@ public class RegisterActivity extends AppCompatActivity {
                     if (task.isSuccessful()){
                         Toast.makeText(RegisterActivity.this, "You are now registered!", Toast.LENGTH_SHORT).show();
 
+                        //stores user data in Firestore database
                         userID = mAuth.getCurrentUser().getUid();
                         DocumentReference documentReference = db.collection("users").document(userID);
                         Map<String, Object> user = new HashMap<>();
