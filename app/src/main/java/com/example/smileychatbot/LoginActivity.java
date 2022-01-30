@@ -23,6 +23,9 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import org.w3c.dom.Text;
 
@@ -36,6 +39,8 @@ public class LoginActivity extends AppCompatActivity {
     TextInputEditText etLoginEmail, etLoginPassword;
 
     private FirebaseAuth mAuth;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,15 +73,39 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    //using firebase authentication
     private void loginUser(){
         String email = etLoginEmail.getText().toString();
         String password = etLoginPassword.getText().toString();
 
+        //email pattern
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+        //password pattern
+        String passPattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$";
+        /*
+        ^  #start-of-string
+        (?=.*[0-9])       # a digit must occur at least once
+        (?=.*[a-z])       # a lower case letter must occur at least once
+        (?=.*[A-Z])       # an upper case letter must occur at least once
+        (?=.*[@#$%^&+=])  # a special character must occur at least once you can replace with your special characters
+        (?=\\S+$)          # no whitespace allowed in the entire string
+        .{4,}             # anything, at least six places though
+        $*/
+
         if (TextUtils.isEmpty(email)){
             etLoginEmail.setError("Email cannot be empty");
             etLoginEmail.requestFocus();
-        }else if (TextUtils.isEmpty(password)){
+        }else if(!email.matches(emailPattern)){
+            etLoginEmail.setError("Invalid email");
+            etLoginEmail.requestFocus();
+
+        } else if (TextUtils.isEmpty(password)){
             etLoginPassword.setError("Password cannot be empty");
+            etLoginPassword.requestFocus();
+
+        }else if(!password.matches(passPattern)) {
+            etLoginPassword.setError("Invalid Password");
             etLoginPassword.requestFocus();
         }else{
             mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -97,6 +126,5 @@ public class LoginActivity extends AppCompatActivity {
         Intent RegisterIntent = new Intent(this, RegisterActivity.class);
         startActivity(RegisterIntent);
     }
-
 
 }

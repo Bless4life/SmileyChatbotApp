@@ -17,11 +17,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -30,9 +37,10 @@ public class RegisterActivity extends AppCompatActivity {
     TextView txt_welcome, txt, txt_login;
     ImageView logo;
     TextInputEditText etRegEmail, etRegPassword, etRegName;
+    String userID;
 
-    private FirebaseAuth mAuth;
-
+    private FirebaseAuth mAuth;//authentication firebase
+    FirebaseFirestore db = FirebaseFirestore.getInstance();//Firestore database
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    //using firebase authentication to create users
     private void createUser(){
         String email = etRegEmail.getText().toString();
         String password = etRegPassword.getText().toString();
@@ -116,6 +125,19 @@ public class RegisterActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
                         Toast.makeText(RegisterActivity.this, "You are now registered!", Toast.LENGTH_SHORT).show();
+
+                        userID = mAuth.getCurrentUser().getUid();
+                        DocumentReference documentReference = db.collection("users").document(userID);
+                        Map<String, Object> user = new HashMap<>();
+                        user.put("fName", fullName);
+                        user.put("email", email);
+                        user.put("password", password);
+                        documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                Log.d(TAG, "onSuccess: user profile is created for " + userID);
+                            }
+                        });
                         startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                     }else{
                         Toast.makeText(RegisterActivity.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
