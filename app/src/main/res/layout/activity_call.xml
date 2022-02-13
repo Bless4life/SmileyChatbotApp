@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:textAlignment="center"
+    tools:context=".CallActivity">
+
+    <!--Title-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="Crisis Helplines"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="You are not alone, Help is just a call away."
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/imgUk"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/uk_flag" />
+
+        <TextView
+            android:layout_width="310dp"
+            android:layout_height="61dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="78dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="9dp"
+            android:gravity="fill_horizontal"
+            android:text="For United Kingdom please dial 116123"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/imgEur"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/europe_flag" />
+
+        <TextView
+            android:layout_width="292dp"
+            android:layout_height="46dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="76dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="29dp"
+            android:gravity="fill_horizontal"
+            android:text="If you live in europe, please dial 112"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/imgUSA"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/usa_flag" />
+
+        <TextView
+            android:layout_width="327dp"
+            android:layout_height="53dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="20dp"
+            android:text="if you live in united states of america USA please Dial 1-800-985-5990"
+
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/imgIreland"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ireland_flag" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="84dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="46dp"
+            android:gravity="fill_horizontal"
+            android:text="For those living in Ireland please dial 112 123"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+
+            <TextView
+                android:id="@+id/callTxtUk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1. For Europe - Dial 112"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/callTxtIreland"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2. For Ireland - Dial 0899620056"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/callTxtEur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3. For Europe - Dial 0899620056"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+    </LinearLayout>
+-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <EditText
+            android:id="@+id/numberEt"
+            android:layout_width="322dp"
+            android:layout_height="wrap_content"
+            android:hint="Type number..."
+            android:inputType="phone"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btnCall"
+            android:layout_width="182dp"
+            android:layout_height="wrap_content"
+            android:text="Diall" />
+    </LinearLayout>
+</LinearLayout>

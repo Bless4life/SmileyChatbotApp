@@ -28,6 +28,10 @@ public class HomeActivity extends AppCompatActivity {
         profile = (ImageButton) findViewById(R.id.imgBtn_profile);
         exit = (ImageButton) findViewById(R.id.imgBtn_exit);
 
+        //user can view the chat section
+        //user can click to view map and go for a walk
+
+        //takes the user to youtube to listen to music
 
 
         //takes the user to google playStore for recommended games
@@ -42,6 +46,18 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //user can click to create /save/deletes a diary
+
+        //user can click to see the list of help services and can call
+        phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CallActivity();
+            }
+        });
+
+        //user can click to view their profile and analytics
 
         //signs the user out of the app
         exit.setOnClickListener(new View.OnClickListener() {
@@ -61,5 +77,11 @@ public class HomeActivity extends AppCompatActivity {
         MainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(MainIntent);
         finish();
+    }
+
+    //takes user to the list of helpline services and dial activity
+    public void CallActivity(){
+        Intent callIntent = new Intent(this, CallActivity.class);
+        startActivity(callIntent);
     }
 }
