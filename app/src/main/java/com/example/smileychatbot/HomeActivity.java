@@ -32,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
         //user can click to view map and go for a walk
 
         //takes the user to youtube to listen to music
-
+  
 
         //takes the user to google playStore for recommended games
         game.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +48,12 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         //user can click to create /save/deletes a diary
+        diary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               // DiaryActivity();
+            }
+        });
 
         //user can click to see the list of help services and can call
         phone.setOnClickListener(new View.OnClickListener() {
