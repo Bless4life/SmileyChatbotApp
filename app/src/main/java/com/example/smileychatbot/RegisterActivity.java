@@ -81,6 +81,7 @@ public class RegisterActivity extends AppCompatActivity {
         String email = etRegEmail.getText().toString();
         String password = etRegPassword.getText().toString();
         String fullName = etRegName.getText().toString();
+
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";//email pattern
 
         //password pattern

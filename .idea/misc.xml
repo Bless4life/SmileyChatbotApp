@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_call.xml" value="0.25" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_diary.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_home.xml" value="0.2986111111111111" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_music.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_register.xml" value="0.2" />
       </map>
     </option>

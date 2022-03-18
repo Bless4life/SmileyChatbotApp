@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -14,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class HomeActivity extends AppCompatActivity {
 
     ImageButton bot, walk, music, game, diary, phone, profile, exit;
+    Button chat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +30,38 @@ public class HomeActivity extends AppCompatActivity {
         profile = (ImageButton) findViewById(R.id.imgBtn_profile);
         exit = (ImageButton) findViewById(R.id.imgBtn_exit);
 
-        //user can view the chat section
+        chat = (Button) findViewById(R.id.btn_talk);
+
+        //user clicks the "talk to me" to chat with the IBM Watson
+        chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //chatBotActivity();
+            }
+        });
+
+        //user can view the chat bot using IBM Watson
+        bot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //chatBotActivity();
+            }
+        });
         //user can click to view map and go for a walk
+        walk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //MapActivity();
+            }
+        });
 
         //takes the user to youtube to listen to music
-  
+        music.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PlayMusicActivity();
+            }
+        });
 
         //takes the user to google playStore for recommended games
         game.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +80,7 @@ public class HomeActivity extends AppCompatActivity {
         diary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // DiaryActivity();
+               DiaryActivity();
             }
         });
 
@@ -89,5 +118,17 @@ public class HomeActivity extends AppCompatActivity {
     public void CallActivity(){
         Intent callIntent = new Intent(this, CallActivity.class);
         startActivity(callIntent);
+    }
+
+    //takes user to music Activity where user plays song
+    public void PlayMusicActivity(){
+        Intent musicIntent = new Intent(this, MusicActivity.class);
+        startActivity(musicIntent);
+    }
+
+    //takes user to diary activity
+    public void DiaryActivity(){
+        Intent diaryIntent = new Intent(this, DiaryActivity.class);
+        startActivity(diaryIntent);
     }
 }
