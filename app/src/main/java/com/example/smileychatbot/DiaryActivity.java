@@ -19,6 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.auth.User;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
 
@@ -98,6 +99,7 @@ public class DiaryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(DiaryActivity.this, ShowActivity.class));
+                Toast.makeText(DiaryActivity.this, "To update/delete, please hold the details long", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -110,7 +112,8 @@ public class DiaryActivity extends AppCompatActivity {
         pd.show();
 
         db.collection("Diary").document(id)
-                .update("title", title, "description", desc)
+                .update("title", title,
+                        "description", desc)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
@@ -159,4 +162,6 @@ public class DiaryActivity extends AppCompatActivity {
                     }
                 });
     }
+
+
 }
