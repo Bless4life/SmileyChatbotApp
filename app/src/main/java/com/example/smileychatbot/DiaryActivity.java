@@ -34,6 +34,7 @@ public class DiaryActivity extends AppCompatActivity {
     //Firestore instance
     FirebaseFirestore db;
 
+    String pId, pTitle, pDescription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,23 @@ public class DiaryActivity extends AppCompatActivity {
         mSaveBtn = (Button) findViewById(R.id.BtnSave);
         mShowBtn = (Button) findViewById(R.id.BtnShow);
 
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null){
+            //Update data
+            mSaveBtn.setText("Update");
+            //get data
+            pId = bundle.getString("pId");
+            pTitle = bundle.getString("pTitle");
+            pDescription = bundle.getString("pDescription");
+
+            //set data
+            mTitleEt.setText(pTitle);
+            mDescriptionEt.setText(pDescription);
+        }
+        else{
+            mSaveBtn.setText("Save");
+        }
+
         //progress dialog
         pd = new ProgressDialog(this);
 
@@ -56,11 +74,23 @@ public class DiaryActivity extends AppCompatActivity {
         mSaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String title = mTitleEt.getText().toString().trim();
-                String desc = mDescriptionEt.getText().toString().trim();
-
-                //send data
-                uploadData(title, desc);
+                Bundle bundle1 = getIntent().getExtras();
+                if(bundle != null){
+                    //updating
+                    //input data
+                    String id = pId;
+                    String title = mTitleEt.getText().toString().trim();
+                    String desc = mDescriptionEt.getText().toString().trim();
+                    //function call to update data
+                    updateData(id, title, desc);
+                }
+                else{
+                    //input data
+                    String title = mTitleEt.getText().toString().trim();
+                    String desc = mDescriptionEt.getText().toString().trim();
+                    //send data
+                    uploadData(title, desc);
+                }
             }
         });
 
@@ -72,6 +102,29 @@ public class DiaryActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void updateData(String id, String title, String desc) {
+        //set title of progress bar
+        pd.setTitle("Updating your diary");
+        pd.show();
+
+        db.collection("Diary").document(id)
+                .update("title", title, "description", desc)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        pd.dismiss();
+                        Toast.makeText(DiaryActivity.this, "your diary has been updated", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        pd.dismiss();
+                        Toast.makeText(DiaryActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     private void uploadData(String title, String desc){

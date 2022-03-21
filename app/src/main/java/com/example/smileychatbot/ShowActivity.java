@@ -79,6 +79,8 @@ public class ShowActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        modelList.clear();
+
                         //called when data is retrieved
                         pd.dismiss();
 
@@ -102,6 +104,31 @@ public class ShowActivity extends AppCompatActivity {
                         //call when there is any error while retrieving
                         pd.dismiss();
                         Toast.makeText(ShowActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    public void deleteData(int index){
+        //set title of progress dialog
+        pd.setTitle("Deleting your diary");
+        //show progress dialog
+        pd.show();
+
+        db.collection("Diary").document(modelList.get(index).getId())
+                .delete()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        //called when deleted successfully
+                        Toast.makeText(ShowActivity.this, "Deleted..", Toast.LENGTH_SHORT).show();
+                        //update data
+                        showData();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        //called when there is an error
                     }
                 });
     }
