@@ -9,30 +9,22 @@
     tools:context=".DiaryActivity">
 
 
-
     <!--Edittext: Input title as string-->
-
-
-    <!--Edittext: Input desc as string-->
-
-    <!--Button: Save/Upload data to the firebase cloud Firestore-->
-
     <EditText
         android:id="@+id/titleET"
-        android:layout_width="464dp"
+        android:layout_width="452dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:layout_margin="2dp"
         android:background="@color/white"
         android:hint="Title"
         android:inputType="text"
         android:padding="10dp" />
 
+    <!--Edittext: Input desc as string-->
     <EditText
         android:id="@+id/descET"
-        android:layout_width="467dp"
-        android:layout_height="377dp"
-        android:layout_gravity="center_horizontal"
+        android:layout_width="452dp"
+        android:layout_height="370dp"
         android:layout_margin="2dp"
         android:background="@color/white"
         android:gravity="start"
@@ -41,19 +33,22 @@
         android:minHeight="250dp"
         android:padding="10dp" />
 
+
+    <!--Button: Save/Upload data to the firebase cloud Firestore-->
     <Button
         android:id="@+id/BtnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Save" />
+        android:text="Save your diary" />
 
+    <!--Button: Save/Upload data to the firebase cloud Firestore-->
     <Button
         android:id="@+id/BtnShow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Show" />
+        android:text="View your diaries" />
 
 
 </LinearLayout>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +26,7 @@ public class DiaryActivity extends AppCompatActivity {
 
     //Views
     EditText mTitleEt, mDescriptionEt;
-    Button mSaveBtn;
+    Button mSaveBtn, mShowBtn;
 
     //progress dialog
     ProgressDialog pd;
@@ -39,11 +40,11 @@ public class DiaryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diary);
 
-
-
+        //Initialize views with its xml
         mTitleEt = (EditText) findViewById(R.id.titleET);
         mDescriptionEt = (EditText) findViewById(R.id.descET);
         mSaveBtn = (Button) findViewById(R.id.BtnSave);
+        mShowBtn = (Button) findViewById(R.id.BtnShow);
 
         //progress dialog
         pd = new ProgressDialog(this);
@@ -60,6 +61,14 @@ public class DiaryActivity extends AppCompatActivity {
 
                 //send data
                 uploadData(title, desc);
+            }
+        });
+
+        mShowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DiaryActivity.this, ShowActivity.class));
+                finish();
             }
         });
 
