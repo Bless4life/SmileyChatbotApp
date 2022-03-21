@@ -11,27 +11,27 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="67dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
+        <!--Show title-->
         <TextView
             android:id="@+id/rTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="Title"
-            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <!--Show description-->
         <TextView
             android:id="@+id/rDesc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="Description"
+            android:textSize="18sp"
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
