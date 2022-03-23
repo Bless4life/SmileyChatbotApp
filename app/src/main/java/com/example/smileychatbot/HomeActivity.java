@@ -51,7 +51,7 @@ public class HomeActivity extends AppCompatActivity {
         walk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //MapActivity();
+                MapTrackActivity();
             }
         });
 
@@ -106,6 +106,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
+
+
     //takes user back to the front page
     public void MainActivity(){
         Intent MainIntent = new Intent(this, MainActivity.class);
@@ -130,5 +132,11 @@ public class HomeActivity extends AppCompatActivity {
     public void DiaryActivity(){
         Intent diaryIntent = new Intent(this, DiaryActivity.class);
         startActivity(diaryIntent);
+    }
+
+    //takes user to the map activity
+    private void MapTrackActivity() {
+        Intent MapIntent = new Intent(this, MapDirectionActivity.class);
+        startActivity(MapIntent);
     }
 }
