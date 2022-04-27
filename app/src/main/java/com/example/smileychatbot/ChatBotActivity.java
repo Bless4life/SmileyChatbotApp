@@ -380,6 +380,8 @@ public class ChatBotActivity extends AppCompatActivity {
      */
 
 
+
+
     /**
      * Check Internet Connection
      *
