@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
 
-    ImageButton bot, walk, music, game, diary, phone, profile, exit;
+    ImageButton bot, walk, music, game, diary, phone, weather, exit;
     Button chat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class HomeActivity extends AppCompatActivity {
         game = (ImageButton) findViewById(R.id.imgBtn_game);
         diary = (ImageButton) findViewById(R.id.imgBtn_diary);
         phone = (ImageButton) findViewById(R.id.imgBtn_phone);
-        profile = (ImageButton) findViewById(R.id.imgBtn_profile);
+        weather = (ImageButton) findViewById(R.id.imgBtn_weather);
         exit = (ImageButton) findViewById(R.id.imgBtn_exit);
 
         chat = (Button) findViewById(R.id.btn_talk);
@@ -36,7 +36,7 @@ public class HomeActivity extends AppCompatActivity {
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //chatBotActivity();
+                chatBotActivity();
             }
         });
 
@@ -44,7 +44,7 @@ public class HomeActivity extends AppCompatActivity {
         bot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //chatBotActivity();
+                chatBotActivity();
             }
         });
         //user can click to view map and go for a walk
@@ -92,7 +92,13 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        //user can click to view their profile and analytics
+        //user can click to view the weather
+        weather.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                WeatherActivity();
+            }
+        });
 
         //signs the user out of the app
         exit.setOnClickListener(new View.OnClickListener() {
@@ -138,5 +144,17 @@ public class HomeActivity extends AppCompatActivity {
     private void MapTrackActivity() {
         Intent MapIntent = new Intent(this, MapDirectionActivity.class);
         startActivity(MapIntent);
+    }
+
+    //takes user to the chat bot activity
+    private void chatBotActivity() {
+        Intent ChatBotIntent = new Intent(this, ChatBotActivity.class);
+        startActivity(ChatBotIntent);
+    }
+
+    //takes user to the weather activity
+    public void WeatherActivity(){
+        Intent WeatherIntent = new Intent(this, WeatherActivity.class);
+        startActivity(WeatherIntent);
     }
 }

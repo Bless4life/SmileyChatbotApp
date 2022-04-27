@@ -5,7 +5,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginLeft="25dp"
-
     tools:context=".HomeActivity"
     android:orientation="horizontal">
 
@@ -13,6 +12,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="354dp"
+
         android:layout_height="35dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,18 +81,18 @@
             android:src="@drawable/ic_phone" />
 
         <ImageButton
-            android:id="@+id/imgBtn_profile"
+            android:id="@+id/imgBtn_weather"
             android:layout_width="38dp"
             android:layout_height="match_parent"
             android:background="#00000000"
             android:backgroundTint="#FFFFFF"
             android:contentDescription="User"
             android:cropToPadding="true"
-            android:src="@drawable/ic_user" />
+            android:src="@drawable/ic_weather" />
 
         <ImageButton
             android:id="@+id/imgBtn_exit"
-            android:layout_width="42dp"
+            android:layout_width="54dp"
             android:layout_height="match_parent"
             android:background="#00000000"
             android:backgroundTint="#FFFFFF"
@@ -118,7 +118,7 @@
             android:clickable="false"
             android:text="Chat"
             android:textAlignment="center"
-            android:textColor="#000" />
+            android:textColor="#fff" />
 
         <TextView
             android:layout_width="49dp"
@@ -126,7 +126,7 @@
             android:clickable="false"
             android:text="Walk"
             android:textAlignment="center"
-            android:textColor="#000" />
+            android:textColor="#fff" />
 
         <TextView
             android:layout_width="48dp"
@@ -134,7 +134,7 @@
             android:clickable="false"
             android:text="Music"
             android:textAlignment="center"
-            android:textColor="#000" />
+            android:textColor="#fff" />
 
         <TextView
             android:layout_width="47dp"
@@ -142,7 +142,7 @@
             android:clickable="false"
             android:text="Game"
             android:textAlignment="center"
-            android:textColor="#000" />
+            android:textColor="#fff" />
 
         <TextView
             android:layout_width="43dp"
@@ -151,7 +151,7 @@
             android:clickable="false"
             android:text="Diary"
             android:textAlignment="center"
-            android:textColor="#000" />
+            android:textColor="#fff" />
 
         <TextView
             android:layout_width="39dp"
@@ -159,15 +159,15 @@
             android:clickable="false"
             android:text="Ring"
             android:textAlignment="center"
-            android:textColor="#000" />
+            android:textColor="#fff" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:clickable="false"
-            android:text="Profile"
+            android:text="Weather"
             android:textAlignment="center"
-            android:textColor="#000" />
+            android:textColor="#fff" />
 
         <TextView
             android:layout_width="40dp"
@@ -175,13 +175,13 @@
             android:clickable="false"
             android:text="Exit"
             android:textAlignment="center"
-            android:textColor="#000" />
+            android:textColor="#fff" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/logo_image"
-        android:layout_width="357dp"
-        android:layout_height="441dp"
+        android:layout_width="365dp"
+        android:layout_height="439dp"
         android:src="@drawable/ic_chat_bot"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

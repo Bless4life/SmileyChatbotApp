@@ -15,7 +15,7 @@
         android:layout_height="43dp"
         android:gravity="center"
         android:text="Crisis Helplines"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold" />
 
@@ -25,7 +25,7 @@
         android:fontFamily="sans-serif-light"
         android:gravity="center"
         android:text="You are not alone, Help is just a call away."
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold" />
 
@@ -52,7 +52,7 @@
             android:layout_marginEnd="9dp"
             android:gravity="fill_horizontal"
             android:text="For United Kingdom please dial 116123"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -80,7 +80,7 @@
             android:layout_marginEnd="29dp"
             android:gravity="fill_horizontal"
             android:text="If you live in europe, please dial 112"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -107,7 +107,7 @@
             android:text="if you live in united states of america USA please Dial 1-800-985-5990"
 
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -135,7 +135,7 @@
             android:layout_marginEnd="46dp"
             android:gravity="fill_horizontal"
             android:text="For those living in Ireland please dial 112 123"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
     </RelativeLayout>

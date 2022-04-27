@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmileyChatbot">
         <activity
+            android:name=".WeatherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatBotActivity"
+            android:exported="false" />
+        <activity
             android:name=".MapDirectionActivity"
             android:exported="false" />
         <activity

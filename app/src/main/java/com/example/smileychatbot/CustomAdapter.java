@@ -83,6 +83,16 @@ public class CustomAdapter extends RecyclerView.Adapter<ViewHolder> {
                     }
                 }).create().show();
             }
+
+            @Override
+            public void onClick(View child, int childPosition) {
+
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
         });
 
         return viewHolder;

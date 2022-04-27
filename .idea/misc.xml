@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_call.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_chat_bot.xml" value="0.22" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_diary.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_home.xml" value="0.2986111111111111" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_login.xml" value="0.25" />
@@ -12,6 +13,11 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_music.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_show.xml" value="0.17426545086119555" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/activity_weather.xml" value="0.1403985507246377" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/chat_item_self.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/chat_item_watson.xml" value="0.16160081053698075" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/content_chat_room.xml" value="0.22" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/item_chat_watson.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/layout/model_layout.xml" value="0.25513196480938416" />
         <entry key="..\:/Users/user/AndroidStudioProjects/SmileyChatbot/app/src/main/res/menu/menu_main.xml" value="0.33" />
       </map>
