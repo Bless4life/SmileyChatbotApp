@@ -1,5 +1,9 @@
 package com.example.smileychatbot;
 
+/**
+ * Blessing Adeniji B00117254
+ */
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;

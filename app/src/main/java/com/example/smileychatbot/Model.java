@@ -1,5 +1,9 @@
 package com.example.smileychatbot;
 
+/**
+ * Blessing Adeniji B00117254
+ */
+//for diary
 public class Model {
     String id, title, description;
 

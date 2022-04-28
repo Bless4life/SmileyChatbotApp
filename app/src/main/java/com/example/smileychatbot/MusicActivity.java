@@ -1,5 +1,8 @@
 package com.example.smileychatbot;
 
+/**
+ * Blessing Adeniji B00117254
+ */
 
 import android.os.Bundle;
 import android.view.View;

@@ -1,8 +1,13 @@
 package com.example.smileychatbot;
 
+/**
+ * Blessing Adeniji B00117254
+ */
+
 import java.io.Serializable;
 import com.ibm.watson.assistant.v2.model.RuntimeResponseGeneric;
 
+//for chatbot
 public class Message implements Serializable {
     String id, message, url, title, description;
     Type type;

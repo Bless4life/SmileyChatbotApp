@@ -1,5 +1,9 @@
 package com.example.smileychatbot;
 
+/**
+ * Blessing Adeniji B00117254
+ */
+
 import android.content.Context;
 import android.view.GestureDetector;
 import android.view.MotionEvent;

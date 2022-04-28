@@ -1,5 +1,9 @@
 package com.example.smileychatbot;
 
+/**
+ * Blessing Adeniji B00117254
+ */
+
 import static androidx.constraintlayout.widget.ConstraintLayoutStates.TAG;
 
 import androidx.annotation.NonNull;
@@ -29,6 +33,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+
 
 public class RegisterActivity extends AppCompatActivity {
 

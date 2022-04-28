@@ -7,6 +7,7 @@
     tools:context=".MusicActivity"
     android:orientation="vertical">
 
+    <!-- Blessing Adeniji B00117254 -->
     <com.google.android.youtube.player.YouTubePlayerView
         android:layout_width="match_parent"
         android:layout_height="250dp"

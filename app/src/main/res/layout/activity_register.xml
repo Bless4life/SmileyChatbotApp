@@ -9,6 +9,7 @@
     android:background="#fff"
     android:padding="20dp">
 
+    <!-- Blessing Adeniji B00117254 -->
     <ImageView
         android:id="@+id/logo_image"
         android:layout_width="wrap_content"

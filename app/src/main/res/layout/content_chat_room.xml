@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     tools:showIn="@layout/activity_chat_bot">
 
+    <!-- Blessing Adeniji B00117254 -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
