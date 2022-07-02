@@ -30,8 +30,8 @@ public class WeatherActivity extends AppCompatActivity {
 
     EditText etCity, etCountry;
     TextView tvResult;
-    private final String url = "https://api.openweathermap.org/data/2.5/weather";
-    private final String appid = "403cec95760dad6305b6c2e678e9ec79";
+    private final String url = "url_website";
+    private final String appid = "appid";
     DecimalFormat df = new DecimalFormat("#.##");
 
 
